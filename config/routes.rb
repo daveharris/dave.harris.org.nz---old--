@@ -1,4 +1,6 @@
 DaveHarrisOrgNz::Application.routes.draw do
+  resources :posts
+
   resources :posts do
     resources :comments
   end
@@ -11,6 +13,7 @@ DaveHarrisOrgNz::Application.routes.draw do
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
+  match 'blog' => 'posts#index'
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase

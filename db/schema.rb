@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110302032216) do
+ActiveRecord::Schema.define(:version => 20110522110236) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
