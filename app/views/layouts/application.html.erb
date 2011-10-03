@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>dave.harris.org.nz</title>
+  <title>Dave Harris</title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
-<body style="background: #EEEEEE;">
+<body>
+	<div id="layout">
+    <div id="header">
+      <h1 id="logo"><a href="./" title="Company">Dave<span class="light">Harris</span><span class="leaf">&nbsp;</span></a></h1>
+      <hr class="noscreen" />   
+       
+      <p class="noscreen noprint">
+        <em>Skip to <a href="#obsah">content</a>, <a href="#nav">navigation</a>.</em>
+      </p>
+    </div>
+      
+    <hr class="noscreen" />
+      
+    <div id="nav" class="box">
+      <ul>
+        <li><a href="/">Home<br /><span>For the start...</span></a></li>
+        <li><a href="/posts">Blog<br /><span>For nothing...</span></a></li>
+        <li><a href="http://github.com/daveharris">Pojects<br /><span>For Fun...</span></a></li>
+        <li><a href="http://photos.harris.org.nz">Photography<br /><span>For creativity...</span></a></li>
+      </ul>
+    </div>
 
-<%= yield %>
+    <div id="container" class="box">
+      <%= yield %>
+    </div>
 
+    <div id="footer">
+      <span class="f-left">&copy; 2008 <a href="/">Dave Harris</a></span>
+      <span class="f-right">Design: <a href="http://www.davidkohout.cz">David Kohout</a></span>
+    </div>
+    
+  </div>
 </body>
 </html>
