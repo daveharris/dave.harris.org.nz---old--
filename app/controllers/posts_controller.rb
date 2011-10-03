@@ -14,7 +14,6 @@ class PostsController < ApplicationController
   # GET /posts/1.xml
   def show
     @post = Post.find(params[:id])
-    @user = User.find(@post.user_id)
 
     respond_to do |format|
       format.html # show.html.erb
