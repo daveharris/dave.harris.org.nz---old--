@@ -7,19 +7,18 @@ body {
   font-size: 13px;
   line-height:24px;
   color: #e8eaeb; 
-  text-align: center; 
 }
 
 /* links --------------------------------------------------------------- */
 a {color:#fff;}
 a:link {color:#fff;}
-a:hover {color:#fff; text-decoration: none;}
+a:hover {color: #e6d2bf; text-decoration: none;}
 
 /* headings --------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 { margin:15px 0 10px 0; }
 h1 { font-size:200%; }
-h2 { font-size:160%; font-family: 'Trebuchet MS', 'Geneva CE', lucida, sans-serif; font-weight: normal; }
-h3 { font-size:120%; margin-top: 25px; font-family: 'Trebuchet MS', 'Geneva CE', lucida, sans-serif;}
+h2 { font-size:160%; }
+h3 { font-size:120%; }
 h4 { font-size:120%; }
 h5 { font-size:100%; }
 
@@ -89,24 +88,11 @@ h5 { font-size:100%; }
         }
         
         #nav ul li a:hover {
-          background: #0a151f;
+          color: #e6d2bf;
         }
 
       	#nav ul li#active a {
         }
-  
-  
-  
-    .content {
-      /*float: right; 
-      padding: 0 0 0 0;
-      width:570px;
-      z-index: 10;*/
-      padding: 7px;
-    }
-    .content .in{
-      padding: 0 0 0 10px;
-    }
   
   	/* columns ----------------------------------------------------------------- */
   	#panel-left { float:left; width:200px; }
@@ -115,6 +101,11 @@ h5 { font-size:100%; }
     #panel-left span  { color: #515f6a; }
     
     #panel-left p  { margin-top: 5px; }
+
+    /* content ----------------------------------------------------------------- */
+    .post {
+      padding-top: 10px;
+    }
   
   	/* footer ----------------------------------------------------------------- */
   	#footer {
@@ -137,7 +128,7 @@ h5 { font-size:100%; }
 
 
 /* paragraphs -------------------------------------------------------------------- */
-p { margin:15px 0; }
+/*p { margin:15px 0; }*/
 
 /* tables --------------------------------------------------------------------- */
 table { margin:15px 0; border: 1px solid #324455; border-collapse:collapse; border-spacing:0; font-size:100%; width: 100%;}
