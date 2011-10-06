@@ -10,8 +10,33 @@
   <%= @post.content %>
 </p>
 
-<p class="alt-post">
+<h3>Tags</h3>
+<p>
+<% @post.tags.each do |tag| %>
+  <%= link_to tag.name, tag %>
+<% end %>
+</p>
+
+<p class="alt-color">
   <span>For logged in user only</span>
+  
   <%= link_to 'Edit', edit_post_path(@post) %>
-  <%= link_to 'Destroy', @post, :confirm => 'Are you sure?', :method => :delete %>
+  <%= link_to 'Delete post', @post, :confirm => 'Are you sure?', :method => :delete %>
+  
+  <h2>Add a tag</h2>
+  <%= form_for([@post, @post.tags.build]) do |f| %>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+    </div>
+    <% unless f.object.nil? || f.object.new_record? %>
+      <div class="field">
+        <%= tag_form.label :_destroy, 'Remove:' %>
+        <%= tag_form.check_box :_destroy %>
+      </div>
+    <% end %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
 </p>

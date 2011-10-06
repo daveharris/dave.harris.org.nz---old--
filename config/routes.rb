@@ -1,5 +1,9 @@
 DaveHarrisOrgNz::Application.routes.draw do
-  resources :posts
+  resources :posts do
+    resources :tags
+  end
+
+  resources :tags
 
   get "home/index"
 

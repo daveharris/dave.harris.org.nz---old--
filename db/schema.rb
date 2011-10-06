@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110710060747) do
+ActiveRecord::Schema.define(:version => 20111006035820) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -27,6 +27,20 @@ ActiveRecord::Schema.define(:version => 20110710060747) do
     t.datetime "updated_at"
     t.integer  "user_id"
   end
+
+  create_table "posts_tags", :id => false, :force => true do |t|
+    t.integer "post_id"
+    t.integer "tag_id"
+  end
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tags", ["post_id"], :name => "index_tags_on_post_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

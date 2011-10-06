@@ -177,12 +177,12 @@ hr { display:block; height:1px; margin:10px 0; padding:0; border:0 solid #CCC; b
 .foto{  display: block;}
 
 /* custom --------------------------------------------------------------------- */
-.alt-post {
+.alt-color {
   background-color: #e6d2bf;
   color: black;
 }
 
-.alt-post a:link {
+.alt-color a:link {
   color: black;
 }
 

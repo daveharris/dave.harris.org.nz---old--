@@ -1,0 +1,5 @@
+<h3>All posts tagged with <%= @tag.name %></h3>
+
+<% @posts_with_tag.each do |post| %>
+  <p><%= link_to post.title, post %></p>
+<% end %>
