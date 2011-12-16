@@ -7,9 +7,15 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash#{name}" %>
+  <% end %>
+
 	<div id="layout">
     <div id="header">
       <h1 id="logo"><a href="./">Dave<span class="light">Harris</span><span class="leaf">&nbsp;</span></a></h1>
+      <%= render "shared/user_nav" %>
        
       <p class="noscreen noprint">
         <em>Skip to <a href="#obsah">content</a>, <a href="#nav">navigation</a>.</em>
